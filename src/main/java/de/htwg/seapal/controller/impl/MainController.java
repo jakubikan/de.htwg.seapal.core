@@ -152,6 +152,10 @@ public final class MainController
             Collection.addAll(getFriendDocuments(document, userid));
         }
 
+        if (scope.equals("all") || scope.equals("asking")) {
+            Collection.addAll(getAskingDocuments(document, userid));
+        }
+
         return Collection;
     }
 
